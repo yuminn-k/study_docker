@@ -20,6 +20,7 @@ docker run -d -p 80:80 my-web-server
 docker ps
 
 # 컨테이너 삭제
-# 다음 명령어로 컨테이너를 중지하고, 삭제합니다.
+# 다음 명령어로 컨테이너를 중지하고, 삭제합니다. --force 명령어를 통해 중지하지 않은 채로 즉시 삭제할 수 있습니다.
 docker stop 컨테이너_ID
 docker rm 컨테이너_ID
+docker rm --force 컨테이너_ID
