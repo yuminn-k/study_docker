@@ -1,0 +1,22 @@
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: example
+      MYSQL_USER: example
+      MYSQL_PASSWORD: example
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
+volumes:
+  db_data:
+  mongo_data:
